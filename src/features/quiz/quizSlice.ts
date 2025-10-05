@@ -1,6 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { mockQuestions } from "@/app/quiz/page";
-
 // Define the initial state interface
 interface QuizState {
   questions: { id: number; question: string; options: string[]; correctAnswer: number }[];
