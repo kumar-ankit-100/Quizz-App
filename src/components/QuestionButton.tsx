@@ -12,7 +12,7 @@ interface Props {
 
 export function QuestionButton({ index, questionId }: Props) {
   const dispatch = useDispatch();
-  const { answers, markedForReview } = useSelector((state: RootState) => state.quiz);
+  const { answers, markedForReview, currentQuestion } = useSelector((state: RootState) => state.quiz);
   const status =
     markedForReview[questionId] && answers[questionId] !== undefined
       ? "marked-answered"
