@@ -69,9 +69,8 @@ export default function QuizReportPage() {
     let correct = 0, incorrect = 0, unanswered = 0;
     console.log("Calculating results with questions:", questions);
     console.log("Calculating results with answers:", answers);
-    
-    let newAnswers: any[] = [];
-    newAnswers = JSON.parse(answers);
+      let newAnswers: Record<number, number> = answers;
+
     
     for (const q of questions) {
       const ans = newAnswers[q.id];
